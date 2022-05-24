@@ -1,0 +1,17 @@
+(
+    printInt(itrfib(10)),
+    0
+) 
+where
+    fun itrfib(n:integer):integer= (
+        f1=1,f2=1,
+        for i=2,n-1:
+           (f=f1,f1=f1+f2,f2=f,none)
+        end,
+        f1
+    ) where var f:integer var f1:integer var f2:integer var i:integer end
+
+    # STDLIB
+    fun printInt( i:integer ):void
+    fun printStr( s:string ):void
+end

@@ -1,0 +1,13 @@
+(
+    printStr("10!="),
+    printInt(iterfac(10)),
+    0
+) where
+    fun iterfac(n:integer):integer=(
+        f=1,
+        for i=1,n: (f=f*i,none) end,
+        f
+    ) where var i:integer var f:integer end
+    fun printInt( i:integer ): void
+    fun printStr( s:string ): void
+end

@@ -1,0 +1,13 @@
+# prev program consists of a main statement
+# this can be a list of expressions
+(
+  printStr("Hello, world!"),
+  # last value is implicitly used as the result
+  0
+)
+where
+  # used functions and variables must be explicitly declared
+  # even builtin functions for now
+  fun printStr(message: string): void
+end
+
