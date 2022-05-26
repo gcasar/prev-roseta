@@ -1,0 +1,10 @@
+# tests simple nested records
+# we expect the following namespaces to be generated
+# rect#, point#
+(
+  A.a.x
+) where
+    typ point: rec{x:integer, y:integer}
+    typ rect: rec{a:point, b:point}
+    var A: rect
+end

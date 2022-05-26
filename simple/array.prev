@@ -1,0 +1,6 @@
+# tests array operations
+(
+  a[0]
+) where
+  var a: arr[1] rec{x:integer}
+end

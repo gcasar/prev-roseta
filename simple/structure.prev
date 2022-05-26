@@ -1,0 +1,8 @@
+# tests structure type declaration and two-pass usage/declaration
+# meaning that a type can be used before it is declared
+(
+  p.x = 1, p.y = 2, 0
+) where
+    var p: point
+    typ point: rec{x:integer, y:integer}
+end

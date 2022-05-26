@@ -1,0 +1,18 @@
+(
+    printStr("10!="),
+    printInt(recfac(10)),
+    1
+) where
+    fun recfac( n:integer ): integer = (
+        if ( n==1 ) then
+            ( f=1, none )
+        else
+            ( f = recfac(n - 1) * n, none )
+        end,
+        f
+    ) where var f:integer end
+
+    # STDLIB
+    fun printInt( i:integer ): void
+    fun printStr( s:string ): void
+end

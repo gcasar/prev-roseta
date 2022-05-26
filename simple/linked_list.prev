@@ -1,0 +1,26 @@
+(
+  first = push(1, null),
+  first = push(2, first),
+  first = pop(first),
+  printInt(first^.val)
+) where
+  var first: ptr node
+  typ node: rec{next:ptr void, val:integer}
+
+  fun push(val:integer, next:ptr node):ptr node=(
+    n = malloc(sizeof node),
+    n^.val = val,
+    n^.next = next,
+    n
+  ) where var n:ptr node end
+
+  fun pop(first:ptr node):ptr node=(
+    r = first^.next,
+    free(first),
+    r
+  ) where var r:ptr node end
+
+  fun malloc(s:integer):ptr void
+  fun free(d:ptr void):void
+  fun printInt(i: integer):void
+end

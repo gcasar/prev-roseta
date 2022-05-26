@@ -1,0 +1,18 @@
+(
+    printStr("fib(10)="),
+    printInt(recfib(10)),
+    1
+) where
+    fun recfib( n:integer ): integer = (
+        if ( n > 1 ) then
+            (f = recfib(n - 2) + recfib(n - 1), none)
+        else 
+            if ( n == 0 ) then (f=0, none) else (f=1, none) end
+        end,
+        f
+    ) where var f:integer end
+
+    # STDLIB
+    fun printInt( i:integer ):void
+    fun printStr( s:string ):void
+end
